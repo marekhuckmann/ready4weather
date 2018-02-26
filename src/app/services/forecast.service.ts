@@ -29,6 +29,8 @@ export class ForecastService {
         let temps = [];
         let icons = [];
 
+        // 40 but sometimes 39
+        const x = data.cnt;
         for (let i = 0; i < 8; i++) {
             arr[i] = data.list[i].main.temp;
         }
@@ -57,7 +59,8 @@ export class ForecastService {
         temps.push(Math.floor(arr.reduce((a, b) => a + b, 0) / arr.length));
         arr.length = 0;
 
-        for (let i = 32; i < 40; i++) {
+        for (let i = 32; i < x; i++) {
+
             arr[i] = data.list[i].main.temp;
         }
         icons.push(data.list[32].weather[0].icon);
