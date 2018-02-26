@@ -13,9 +13,9 @@ import 'rxjs/add/observable/empty';
 @Injectable()
 export class CityService {
   listUpdated = new Subject<City[]>();
-  public cities: City[] = [];
+  cities: City[] = [];
 
-  constructor(public http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getCities() {
     return this.cities.slice();

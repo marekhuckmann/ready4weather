@@ -9,9 +9,9 @@ import { City } from '../../models/city.model';
 })
 
 export class WeatherItemComponent {
-  @Input() public city: City[];
+  @Input() city: City[];
 
-  constructor(public cityService: CityService, public forecastService: ForecastService) { }
+  constructor(private cityService: CityService, private forecastService: ForecastService) { }
 
   onClose() {
     this.cityService.deleteCity();

@@ -12,10 +12,10 @@ import { Subscription } from 'rxjs/Subscription';
 })
 
 export class ForecastListComponent implements OnInit, OnDestroy {
-  public forecasts: Forecast[];
-  public subscription: Subscription;
+  forecasts: Forecast[];
+  private subscription: Subscription;
 
-  constructor(public forecastService: ForecastService) { }
+  constructor(private forecastService: ForecastService) { }
 
   ngOnInit() {
     this.forecasts = this.forecastService.getForecasts();

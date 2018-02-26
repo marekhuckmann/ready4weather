@@ -21,10 +21,10 @@ import 'rxjs/add/operator/distinctUntilChanged';
   `]
 })
 export class WeatherSearchComponent implements OnInit {
-  public searchStream = new Subject<string>();
+  private searchStream = new Subject<string>();
   data: any = {};
 
-  constructor(public cityService: CityService, public forecastService: ForecastService) { }
+  constructor(private cityService: CityService, private forecastService: ForecastService) { }
 
   onAddItem(form: NgForm) {
     // cleans the screen if there's anything displaying

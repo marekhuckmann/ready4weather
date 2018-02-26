@@ -10,7 +10,7 @@ import { ForecastService } from '../../services/forecast.service';
     styleUrls: ['./forecast-item.component.scss']
 })
 export class ForecastItemComponent {
-    @Input() public forecast: Forecast[];
+    @Input() forecast: Forecast[];
 
     constructor() { }
 

@@ -9,10 +9,10 @@ import { Forecast } from '../models/forecast.model';
 @Injectable()
 export class ForecastService {
     forecastListUpdated = new Subject<Forecast[]>();
-    public forecasts: Forecast[] = [];
+    forecasts: Forecast[] = [];
     forecastData: any = {};
 
-    constructor(public http: HttpClient) { }
+    constructor(private http: HttpClient) { }
 
     getCityName(forecast: string) {
         this.searchForecastData(forecast)

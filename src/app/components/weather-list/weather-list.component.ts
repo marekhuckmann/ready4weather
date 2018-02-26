@@ -10,10 +10,10 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class WeatherListComponent implements OnInit, OnDestroy {
   // app can be scaled to display multiple cities at once
-  public cities: City[];
-  public subscription: Subscription;
+  cities: City[];
+  private subscription: Subscription;
 
-  constructor(public cityService: CityService) { }
+  constructor(private cityService: CityService) { }
 
   ngOnInit() {
     this.cities = this.cityService.getCities();
