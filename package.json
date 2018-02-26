@@ -1,6 +1,11 @@
 {
   "name": "ready4weather",
-  "version": "0.0.0",
+  "description": "Ready4S' Recruitment Task",
+  "keywords": [
+    "weather, ready4s"
+  ],
+  "author": "Marek Hückmann",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -10,7 +15,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
@@ -21,8 +25,12 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "bootstrap": "^4.0.0",
+    "bootswatch": "^4.0.0",
     "core-js": "^2.4.1",
+    "font-awesome": "^4.7.0",
     "rxjs": "^5.5.6",
+    "weathericons": "^2.1.0",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {

@@ -1,0 +1,28 @@
+.weather-list {
+  @media all and (min-width: 576px) {
+    width: 80%;
+  }
+  @media all and (min-width: 768px) {
+    width: 70%;
+  }
+  @media all and (min-width: 992px) {
+    width: 60%;
+  }
+  @media all and (min-width: 1200px) {
+    width: 50%;
+  }
+}
+
+.navbar {
+  @media all and (max-width: 575.98px) {
+    justify-content: center;
+  }
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
+
+.weather-icon {
+  float: right;
+}

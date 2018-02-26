@@ -1,0 +1,4 @@
+<button type="submit" class="btn btn-success" (click)="onShowForecast()">5-dniowa prognoza</button>
+<ng-template [ngIf]="forecastFlag">
+  <app-forecast-list></app-forecast-list>
+</ng-template>

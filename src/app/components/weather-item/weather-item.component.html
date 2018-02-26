@@ -1,0 +1,24 @@
+<div class="row weather-item">
+  <div class="col-5 col-sm-4 col-md-3">
+    <p class="city-info">{{ city.name }}, {{ city.country }}</p>
+  </div>
+  <div class="col-3 col-sm-2">
+    <p>{{ city.temperature }}</p>
+  </div>
+  <div class="d-none d-md-block col-md-3">
+    <p><i class="wi wi-strong-wind"></i> {{ city.wind }}</p>
+  </div>
+  <div class="d-none d-sm-block col-sm-3">
+    <p><i class="wi wi-cloudy"></i> {{ city.clouds }}</p>
+  </div>
+  <div class="col-4 col-sm-3 col-md-1">
+    <img
+    class="float-right"
+    *ngIf="city.icon"
+    [src]="'http://openweathermap.org/img/w/'+city.icon+'.png'">
+    <button type="button" class="close" aria-label="Close" (click)="onClose()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<app-forecast-get></app-forecast-get>

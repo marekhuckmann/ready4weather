@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootswatch/dist/cosmo/_variables.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootswatch/dist/cosmo/_bootswatch.scss";
+
+.weather-item {
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 1px 1px 6px #999;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  line-height: 0;
+}
+
+.btn {
+  width: 100%;
+}

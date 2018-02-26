@@ -1,0 +1,10 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand text-center" href="/">
+    <h1>ready4weather</h1>
+  </a>
+</nav>
+
+<article class="container weather-list">
+  <app-weather-search></app-weather-search>
+  <app-weather-item *ngFor="let city of cities" [city]="city"></app-weather-item>
+</article>

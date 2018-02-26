@@ -1,0 +1,12 @@
+<div class="container weather-item">
+  <div class="row">
+    <div class="col-12 forecast">
+      <img *ngFor="let icon of forecast.dayIcons" [src]="'http://openweathermap.org/img/w/'+icon+'.png'">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 forecast">
+      <span *ngFor="let temp of forecast.dayTemps">{{temp}}&deg;C</span>
+    </div>
+  </div>
+</div>
