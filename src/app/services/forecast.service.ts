@@ -9,7 +9,7 @@ import { Forecast } from '../models/forecast.model';
 @Injectable()
 export class ForecastService {
     forecastListUpdated = new Subject<Forecast[]>();
-    forecasts: Forecast[] = [];
+    private forecasts: Forecast[] = [];
     forecastData: any = {};
 
     constructor(private http: HttpClient) { }
@@ -85,7 +85,7 @@ export class ForecastService {
     }
 
     searchForecastData(cityName: string) {
-        return this.http.get<City>('http://api.openweathermap.org/data/2.5/forecast?q=' + cityName +
+        return this.http.get<City[]>('http://api.openweathermap.org/data/2.5/forecast?q=' + cityName +
             '&units=metric&appid=aa9f1394b8547db91b758ccb20c2437a');
     }
 }

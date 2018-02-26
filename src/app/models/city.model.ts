@@ -1,10 +1,10 @@
 export class City {
-  public name: string;
-  public country: string;
-  public temperature: string;
-  public icon: string;
-  public clouds: string;
-  public wind: string;
+  private name: string;
+  private country: string;
+  private temperature: string;
+  private icon: string;
+  private clouds: string;
+  private wind: string;
 
   constructor(name: string, country: string, temp: string, icon: string, clouds: string, wind: string) {
     this.name = name;

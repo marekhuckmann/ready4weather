@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpEvent } from '@angular/common/http';
 import { Subject } from 'rxjs/Subject';
 
 
@@ -13,7 +13,7 @@ import 'rxjs/add/observable/empty';
 @Injectable()
 export class CityService {
   listUpdated = new Subject<City[]>();
-  cities: City[] = [];
+  private cities: City[] = [];
 
   constructor(private http: HttpClient) { }
 
